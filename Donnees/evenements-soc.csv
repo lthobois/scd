@@ -1,0 +1,9 @@
+time_utc,source,actor,action,target,result,context
+2026-10-20T08:30:00Z,change,admin-malik,patch,app-01,SUCCESS,CHG-042 approved maintenance
+2026-10-20T09:10:00Z,identity,prest-01,login,vpn,FAIL,source_ip=203.0.113.17
+2026-10-20T09:12:00Z,identity,prest-01,login,vpn,SUCCESS,source_ip=203.0.113.17 mfa=not_recorded
+2026-10-20T09:14:00Z,directory,prest-01,grant_privileged_role,svc-export,SUCCESS,ticket=not_recorded
+2026-10-20T09:18:00Z,application,svc-export,export_clients,local_export,SUCCESS,rows=12000 transfer_destination=not_recorded
+2026-10-20T09:20:00Z,backup,prest-01,delete_restore_point,backup-isolated,DENIED,policy=separate_admin
+2026-10-20T09:22:00Z,network,app-01,outbound_connection,198.51.100.22,UNKNOWN,bytes_and_completion=not_recorded
+2026-10-20T10:00:00Z,monitoring,probe-01,check_https,portal,FAIL,timeout

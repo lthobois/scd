@@ -1,0 +1,10 @@
+JEU FICTIF — ne pas visiter les adresses.
+De : Support Novalys <support@novalys-assistance.example>
+À : utilisateur@novalys.example
+Objet : URGENT — Réactivez votre MFA sous 15 minutes
+
+Votre compte sera suspendu. Ouvrez https://connexion-novalys.example/reset
+et transmettez le code reçu par téléphone pour terminer la vérification.
+Ne contactez pas le support habituel, il est saturé.
+
+Repère fourni par l’entreprise pour cet exercice : novalys.example

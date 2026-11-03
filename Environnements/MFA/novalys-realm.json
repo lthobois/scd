@@ -1,0 +1,23 @@
+{
+  "realm": "novalys-demo",
+  "enabled": true,
+  "registrationAllowed": false,
+  "resetPasswordAllowed": false,
+  "rememberMe": false,
+  "otpPolicyType": "totp",
+  "otpPolicyAlgorithm": "HmacSHA1",
+  "otpPolicyDigits": 6,
+  "otpPolicyPeriod": 30,
+  "users": [
+    {
+      "username": "prest-01",
+      "enabled": true,
+      "firstName": "Prestataire",
+      "lastName": "Formation",
+      "email": "prest-01@novalys.example",
+      "emailVerified": true,
+      "requiredActions": ["CONFIGURE_TOTP"],
+      "credentials": [{"type": "password", "value": "Novalys-Formation-2026!", "temporary": false}]
+    }
+  ]
+}
