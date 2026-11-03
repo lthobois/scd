@@ -8,7 +8,7 @@
 
 **Matériel :** un ordinateur avec un éditeur de texte (Bloc-notes, TextEdit, VS Code ou équivalent) et une calculatrice. Aucun compte, droit administrateur, accès Internet ni licence n’est nécessaire : toutes les données sont dans cette page.
 
-**Contrôle :** vous travaillez seul. Après chaque partie, comparez votre fichier avec la partie « Atelier 1 » du [corrigé des ateliers](Corrige_ateliers.md). Chaque tâche porte une référence de la forme `A<atelier>-<partie>.<action>.<tâche>` : **A1-2.1.2** signifie atelier 1, partie 2, action 1, tâche 2. En cas de blocage, communiquez seulement cette référence au formateur.
+**Contrôle :** vous travaillez seul. Chaque tâche porte une référence de la forme `A<atelier>-<partie>.<action>.<tâche>` : **A1-2.1.2** signifie atelier 1, partie 2, action 1, tâche 2. En cas de blocage, communiquez seulement cette référence au formateur.
 
 ## Vocabulaire utile
 
@@ -53,7 +53,7 @@ Preuves à demander :
 
 Exemple de forme : `Mode dégradé : téléphone, X commandes/h au lieu de Y, limite : …`
 
-**Résultat attendu :** une BIA courte qui sépare l’activité (prendre les commandes), les moyens (portail, identité, DNS) et les conséquences (livraisons, chiffre d’affaires exposé). Comparez avec le corrigé, partie A1-1. Une priorité technique (« le serveur de base de données est critique ») ne suffit pas à définir une priorité métier : c’est l’activité qui est prioritaire, les serveurs le deviennent parce qu’elle en dépend.
+**Résultat attendu :** une BIA courte qui sépare l’activité (prendre les commandes), les moyens (portail, identité, DNS) et les conséquences (livraisons, chiffre d’affaires exposé). Une priorité technique (« le serveur de base de données est critique ») ne suffit pas à définir une priorité métier : c’est l’activité qui est prioritaire, les serveurs le deviennent parce qu’elle en dépend.
 
 ## 2. Mesurer l’écart aux objectifs
 
@@ -78,7 +78,7 @@ Chez Novalys, le RTO se mesure de l’instant de la panne jusqu’à la fin réu
   - si le RPO est respecté ou non, et de combien il est dépassé le cas échéant.
 - **A1-2.1.2** — Calculez la durée totale de reprise, l’heure de retour du service et la marge restante par rapport au RTO. Refaites le calcul en ajoutant 80 min d’attente d’un prestataire avant l’étape 3, puis concluez de nouveau. Enregistrez le fichier.
 
-**Résultat attendu :** deux conclusions séparées, l’une sur les données perdues (RPO), l’autre sur le temps de retour (RTO). Contrôlez les additions et les conversions minutes/heures avec le corrigé, partie A1-2. Les deux objectifs sont indépendants : une restauration rapide peut perdre trop de données, et une sauvegarde très récente peut prendre trop de temps à remettre en service.
+**Résultat attendu :** deux conclusions séparées, l’une sur les données perdues (RPO), l’autre sur le temps de retour (RTO). Contrôlez les additions et les conversions minutes/heures. Les deux objectifs sont indépendants : une restauration rapide peut perdre trop de données, et une sauvegarde très récente peut prendre trop de temps à remettre en service.
 
 ## 3. Comparer les options de reprise
 
@@ -101,10 +101,10 @@ Une **sauvegarde isolée** est stockée à part et ne peut pas être modifiée o
   - une preuve d’indépendance vis-à-vis du site A.
   - Ajoutez la question à se poser avant d’ouvrir la réplique si l’on soupçonne une attaque.
 
-**Résultat attendu :** un choix argumenté et conditionné à des preuves. Vérifiez avec le corrigé, partie A1-3 : les chiffres annoncés ne sont pas des résultats de test. L’offre la plus rapide sur une panne de serveur n’est pas forcément la plus solide face à la perte d’un site ou à une attaque, par exemple un cluster local qui s’arrête avec le site entier.
+**Résultat attendu :** un choix argumenté et conditionné à des preuves. Les chiffres annoncés ne sont pas des résultats de test. L’offre la plus rapide sur une panne de serveur n’est pas forcément la plus solide face à la perte d’un site ou à une attaque, par exemple un cluster local qui s’arrête avec le site entier.
 
 ## Contrôle final
 
-Votre fichier contient les cinq rubriques, les calculs de la partie 2 et un choix d’offre accompagné de réserves. Si un calcul diffère du corrigé, reprenez **A1-2.1.2** en convertissant toutes les durées en minutes avant d’additionner. Si vous avez choisi l’offre C, relisez le scénario : c’est le site A entier qui est perdu. Conservez le fichier pour l’atelier 2 ; aucun dépôt ni publication n’est demandé.
+Votre fichier contient les cinq rubriques, les calculs de la partie 2 et un choix d’offre accompagné de réserves. Si un calcul vous semble douteux, reprenez **A1-2.1.2** en convertissant toutes les durées en minutes avant d’additionner. Si vous avez choisi l’offre C, relisez le scénario : c’est le site A entier qui est perdu. Conservez le fichier pour l’atelier 2 ; aucun dépôt ni publication n’est demandé.
 
 Bonus facultatif : la direction ramène le RTO à 1 h. Indiquez si l’offre B suffit encore et ce que la direction doit décider.

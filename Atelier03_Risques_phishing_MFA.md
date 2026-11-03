@@ -8,7 +8,7 @@
 
 **Matériel :** un éditeur de texte. Aucun compte, téléphone, droit administrateur ni licence : les politiques d’accès sont simulées sur papier et n’activent aucune MFA réelle. Le [message fictif](Donnees/message-phishing.txt) est fourni ; s’il ne s’ouvre pas, utilisez sa description dans la partie 2. Ne suivez aucun lien et ne saisissez aucun identifiant.
 
-**Contrôle :** vous travaillez seul et comparez votre fichier avec la partie « Atelier 3 » du [corrigé des ateliers](Corrige_ateliers.md). En cas de blocage, communiquez au formateur la référence de la tâche, par exemple **A3-3.1.2**.
+**Contrôle :** vous travaillez seul. En cas de blocage, communiquez au formateur la référence de la tâche, par exemple **A3-3.1.2**.
 
 ## Vocabulaire utile
 
@@ -58,7 +58,7 @@ Contrôle final :
 
   Exemple de forme : `Un salarié mécontent exporte la liste clients → export ouvert à tous → divulgation de données personnelles | 2 | 3 | 6 | … | … | …`
 
-**Résultat attendu :** trois risques distincts, de scores 9, 6 et 6, chacun avec une mesure vérifiable. Comparez avec le corrigé, partie A3-1. Deux scores égaux ne rendent pas deux risques identiques : l’un menace la confidentialité des clients, l’autre la capacité à reprendre après une attaque.
+**Résultat attendu :** trois risques distincts, de scores 9, 6 et 6, chacun avec une mesure vérifiable. Deux scores égaux ne rendent pas deux risques identiques : l’un menace la confidentialité des clients, l’autre la capacité à reprendre après une attaque.
 
 ## 2. Analyser une demande suspecte
 
@@ -69,7 +69,7 @@ Contrôle final :
 - **A3-2.1.1** — Dans « Phishing », notez trois indices vérifiables, dont le domaine d’envoi et la demande de code. Expliquez en une phrase pourquoi ces indices rendent le message suspect sans prouver avec certitude qui l’a envoyé.
 - **A3-2.1.2** — Écrivez la conduite à tenir en trois points : par quel canal connu vérifier, comment signaler le message en interne, ce qu’il ne faut pas faire avec le message. Enregistrez.
 
-**Résultat attendu :** une décision fondée sur ce que demande le message et sur les domaines utilisés. Comparez avec le corrigé, partie A3-2. Un message sans faute d’orthographe et avec un logo resterait suspect avec ces mêmes éléments : aucun support légitime ne demande de lui transmettre un code MFA.
+**Résultat attendu :** une décision fondée sur ce que demande le message et sur les domaines utilisés. Un message sans faute d’orthographe et avec un logo resterait suspect avec ces mêmes éléments : aucun support légitime ne demande de lui transmettre un code MFA.
 
 ## 3. Configurer une politique sur fiches simulées
 
@@ -95,7 +95,7 @@ Contrôle final :
   - Prest-01, administrateur prestataire, MFA oui, appareil ordinaire, veut administrer un serveur ;
   - Paul, même demande que la première, mais sans MFA.
 
-**Résultat attendu :** un accès autorisé et trois refus, chacun justifié par une règle. Comparez avec le corrigé, partie A3-3. Un refus peut venir du rôle (Sara) ou du contexte (Prest-01, Paul sans MFA) : activer la MFA ne corrige pas un droit trop large.
+**Résultat attendu :** un accès autorisé et trois refus, chacun justifié par une règle. Un refus peut venir du rôle (Sara) ou du contexte (Prest-01, Paul sans MFA) : activer la MFA ne corrige pas un droit trop large.
 
 ### 3.2. Préparer l’enrôlement et la récupération sans toucher à un compte réel
 
@@ -106,7 +106,7 @@ Contrôle final :
   - Précisez qu’aucun code ni secret ne doit être écrit dans votre fichier.
 - **A3-3.2.2** — Décrivez la récupération après la perte du téléphone servant de facteur, en cinq étapes : contrôle d’identité selon une procédure approuvée, révocation du facteur perdu, enregistrement d’un nouveau facteur, surveillance des connexions, accès de secours contrôlé si besoin. Enregistrez.
 
-**Résultat attendu :** une procédure dans laquelle la récupération ne devient pas un moyen de contourner la MFA. Comparez avec le corrigé, partie A3-3. Un attaquant qui ne peut pas passer la MFA tentera souvent d’appeler le support en se faisant passer pour l’utilisateur : la procédure de récupération fait donc partie de la protection.
+**Résultat attendu :** une procédure dans laquelle la récupération ne devient pas un moyen de contourner la MFA. Un attaquant qui ne peut pas passer la MFA tentera souvent d’appeler le support en se faisant passer pour l’utilisateur : la procédure de récupération fait donc partie de la protection.
 
 ## Contrôle final
 

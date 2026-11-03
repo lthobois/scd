@@ -8,7 +8,7 @@
 
 **Matériel :** un éditeur de texte et, si disponible, un navigateur vers [l’éditeur BPMN](https://demo.bpmn.io/), accès **Open diagram from local file system**, sans compte pour ouvrir et modifier le modèle local. Téléchargez [commande-depart.bpmn](Donnees/commande-depart.bpmn) et [commande-reference.bpmn](Donnees/commande-reference.bpmn) en conservant leurs extensions. La vue d’architecture reste textuelle ; le processus est un fichier BPMN éditable, descriptif et non exécutable. Sans accès web, la procédure XML de l’action 2.3 permet la même modification locale. Gardez ouverts vos fichiers A1, A3 et A5. S’ils manquent, retenez : site de secours tiède B, RTO 4 h, RPO 15 min, identité présente uniquement sur le site A (à corriger), comptes prestataires à limiter.
 
-**Contrôle :** vous travaillez seul et comparez votre fichier avec la partie « Atelier 6 » du [corrigé des ateliers](Corrige_ateliers.md). En cas de blocage, communiquez au formateur la référence de la tâche, par exemple **A6-2.2.2**.
+**Contrôle :** vous travaillez seul. En cas de blocage, communiquez au formateur la référence de la tâche, par exemple **A6-2.2.2**.
 
 ## Vocabulaire utile
 
@@ -47,7 +47,7 @@ Trajectoire et preuves :
   Exemple de forme : `[Métier] Prise de commandes → [Application] Portail [A, B]`
 - **A6-1.1.3** — Corrigez la dépendance à l’identité présente uniquement sur A. Indiquez comment les comptes de secours et les clés de chiffrement restent disponibles si le site A est perdu. Ajoutez la mention « à tester » à chaque capacité qui n’a pas encore été démontrée.
 
-**Résultat attendu :** une cible lisible où toutes les dépendances apparaissent avec leur site. Comparez avec le corrigé, partie A6-1. La vue présente une conception : les mentions « à tester » évitent de la confondre avec une capacité déjà acquise.
+**Résultat attendu :** une cible lisible où toutes les dépendances apparaissent avec leur site. La vue présente une conception : les mentions « à tester » évitent de la confondre avec une capacité déjà acquise.
 
 ## 2. Autoriser les seuls échanges nécessaires
 
@@ -62,14 +62,14 @@ Trajectoire et preuves :
   - administration → ressources gérées : décrivez le chemin contrôlé plutôt qu’un numéro de port.
 - **A6-2.1.2** — Ajoutez une règle de refus explicite client → base. Reprenez les droits définis dans l’atelier 3 : indiquez ce que l’API vérifie avant d’accepter une modification, et ce qu’elle enregistre dans sa trace, sans mot de passe ni jeton.
 
-**Résultat attendu :** des règles précises et une autorisation métier distincte de l’autorisation réseau. Comparez avec le corrigé, partie A6-2. Atteindre le port 443 ne doit pas suffire pour modifier n’importe quelle commande : c’est l’API qui vérifie le rôle et le périmètre.
+**Résultat attendu :** des règles précises et une autorisation métier distincte de l’autorisation réseau. Atteindre le port 443 ne doit pas suffire pour modifier n’importe quelle commande : c’est l’API qui vérifie le rôle et le périmètre.
 
 ### 2.2. Décrire le traitement d’une commande, sa branche de refus et une relance sans doublon
 
 - **A6-2.2.1** — Dans « Séquence d’une commande et refus », écrivez les étapes dans l’ordre : demande, authentification, autorisation, validation, écriture, confirmation. Placez le refus avant toute écriture si les droits manquent. Ajoutez un identifiant de corrélation, qui permet de suivre la demande dans les journaux sans contenir de secret.
 - **A6-2.2.2** — Le client ne reçoit pas de réponse et renvoie sa demande. Expliquez comment un identifiant de demande unique (clé d’idempotence) évite la création d’une deuxième commande. Enregistrez.
 
-**Résultat attendu :** une branche autorisée et une branche refusée cohérentes. Comparez avec le corrigé, partie A6-2. Une relance réseau ne doit pas devenir une double commande : il faut définir combien de temps l’identifiant de demande est conservé.
+**Résultat attendu :** une branche autorisée et une branche refusée cohérentes. Une relance réseau ne doit pas devenir une double commande : il faut définir combien de temps l’identifiant de demande est conservé.
 
 ### 2.3. Compléter le processus BPMN avec une branche de refus sans écriture
 
@@ -93,9 +93,9 @@ Le processus initial représente une commande reçue, un contrôle des droits et
 
   Ajoutez aussi `<bpmn:outgoing>F5</bpmn:outgoing>` à la passerelle `Choix`. Pour obtenir le placement graphique du refus, recopiez depuis le fichier de référence les deux blocs `bpmndi:BPMNShape` `Refuser_di`, `FinRefus_di` et les deux blocs `bpmndi:BPMNEdge` `F5_di`, `F6_di`, en entier, dans `bpmndi:BPMNPlane` de votre fichier. Il s’agit d’éléments XML complets, avec leurs balises de fermeture ; ne créez pas un second `BPMNPlane`.
 
-- **A6-2.3.3** — Enregistrez puis comparez au fichier de référence : un début, deux tâches (contrôle et enregistrement) plus la tâche de refus, une passerelle exclusive, deux fins et six flux de séquence. Depuis le contrôle, la branche Oui atteint l’écriture ; la branche Non atteint uniquement le refus. Vérifiez que toutes les références visent des identifiants existants. Les identifiants générés par l’éditeur peuvent différer du corrigé : comparez le sens et les chemins, pas leur orthographe. Dans `A6-architecture-decision.txt`, notez seulement la raison du refus avant écriture ; le modèle reste dans son fichier `.bpmn`.
+- **A6-2.3.3** — Enregistrez puis comparez au fichier de référence : un début, deux tâches (contrôle et enregistrement) plus la tâche de refus, une passerelle exclusive, deux fins et six flux de séquence. Depuis le contrôle, la branche Oui atteint l’écriture ; la branche Non atteint uniquement le refus. Vérifiez que toutes les références visent des identifiants existants. Les identifiants générés par l’éditeur peuvent différer du fichier de référence : comparez le sens et les chemins, pas leur orthographe. Dans `A6-architecture-decision.txt`, notez seulement la raison du refus avant écriture ; le modèle reste dans son fichier `.bpmn`.
 
-Résultat attendu : un modèle éditable comportant les deux issues, conservé sous `A6-commande.bpmn`. Vérification : comparez les chemins à [commande-reference.bpmn](Donnees/commande-reference.bpmn) et au corrigé 3. Interprétation : BPMN montre le processus ; le contrôle côté API doit encore être réalisé et testé dans le système. Si le fichier s’affiche en texte dans le navigateur, enregistrez sa cible avec l’extension `.bpmn`, puis ouvrez ce fichier local. Une erreur XML impose de vérifier les balises et identifiants ; l’extension seule ne garantit pas la validité du modèle.
+Résultat attendu : un modèle éditable comportant les deux issues, conservé sous `A6-commande.bpmn`. Vérification : comparez les chemins à [commande-reference.bpmn](Donnees/commande-reference.bpmn). Interprétation : BPMN montre le processus ; le contrôle côté API doit encore être réalisé et testé dans le système. Si le fichier s’affiche en texte dans le navigateur, enregistrez sa cible avec l’extension `.bpmn`, puis ouvrez ce fichier local. Une erreur XML impose de vérifier les balises et identifiants ; l’extension seule ne garantit pas la validité du modèle.
 
 ## 3. Justifier et planifier le changement
 
@@ -109,7 +109,7 @@ Résultat attendu : un modèle éditable comportant les deux issues, conservé s
   - Pour chacun, nommez un responsable (Malik, Inès ou Hugo) et la preuve qui valide le passage.
 - **A6-3.1.3** — Relisez le fichier entier et vérifiez trois points : chaque ressource critique a un moyen de reprise ; aucun flux n’accorde plus que nécessaire ; l’ADR relie le choix au RTO et au RPO. Corrigez si besoin et enregistrez la version finale.
 
-**Résultat attendu :** une décision qui peut être réexaminée et une trajectoire contrôlable étape par étape. Comparez avec le corrigé, partie A6-3. Avoir installé des serveurs à B ne prouve pas que le service reprend : seule une recette complète, chronomètre lancé, le démontre.
+**Résultat attendu :** une décision qui peut être réexaminée et une trajectoire contrôlable étape par étape. Avoir installé des serveurs à B ne prouve pas que le service reprend : seule une recette complète, chronomètre lancé, le démontre.
 
 ## Contrôle final
 

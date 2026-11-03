@@ -8,7 +8,7 @@
 
 **Matériel :** un éditeur de texte. Aucun outil de modélisation, compte ni accès Internet. Gardez consultables le [module 5](../Programme/Modules/Module05_Referentiels_architecture.md) et le [glossaire](../Programme/Glossaire.md) : ils décrivent chaque référentiel. Si vous n’avez pas les fichiers des ateliers précédents, retenez : RTO 4 h, RPO 15 min, identité disponible uniquement sur le site A.
 
-**Contrôle :** vous travaillez seul et comparez votre fichier avec la partie « Atelier 5 » du [corrigé des ateliers](Corrige_ateliers.md). En cas de blocage, communiquez au formateur la référence de la tâche, par exemple **A5-2.1.2**.
+**Contrôle :** vous travaillez seul. En cas de blocage, communiquez au formateur la référence de la tâche, par exemple **A5-2.1.2**.
 
 ## Vocabulaire utile
 
@@ -57,7 +57,7 @@ Affirmations corrigées et questions cloud :
   Exemple de forme : `a → … : apporte … ; ne prouve pas …`
 - **A5-1.1.3** — Trois autres références existent : Zachman (grille de classement des descriptions d’architecture), CMMI (amélioration de la maturité des pratiques) et IT4IT (organisation de la chaîne de valeur du numérique). Pour chacune, écrivez une situation Novalys où elle deviendrait utile. Choisissez ensuite, dans « Combinaison minimale », trois approches pour démarrer le dossier de reprise, avec une raison par choix.
 
-**Résultat attendu :** un choix par besoin, sans classement universel des référentiels. Comparez avec le corrigé, partie A5-1. Une entreprise n’a pas besoin d’appliquer tous les cadres pour prendre une première décision utile : trois approches bien choisies suffisent souvent pour démarrer.
+**Résultat attendu :** un choix par besoin, sans classement universel des référentiels. Une entreprise n’a pas besoin d’appliquer tous les cadres pour prendre une première décision utile : trois approches bien choisies suffisent souvent pour démarrer.
 
 ## 2. Décrire une vue centrée sur la continuité
 
@@ -78,7 +78,7 @@ Affirmations corrigées et questions cloud :
   Identifiez deux écarts qui empêchent d’affirmer que la reprise sur B fonctionne.
 - **A5-2.1.3** — Dans « Écarts détectés et décisions », proposez une décision par écart. Ajoutez un contrôle de cohérence entre la vue applicative (ce dont l’application a besoin) et la vue technique (ce qui existe sur chaque site). Enregistrez.
 
-**Résultat attendu :** une vue qui rend un défaut visible. Comparez avec le corrigé, partie A5-2. On ne corrige pas un SPOF en effaçant sa flèche du schéma : il faut changer le système (ajouter une identité sur B), le scénario ou l’objectif, avec une décision de la direction.
+**Résultat attendu :** une vue qui rend un défaut visible. On ne corrige pas un SPOF en effaçant sa flèche du schéma : il faut changer le système (ajouter une identité sur B), le scénario ou l’objectif, avec une décision de la direction.
 
 ## 3. Employer les normes avec le bon niveau d’affirmation
 
@@ -90,11 +90,11 @@ Affirmations corrigées et questions cloud :
   - « Avec un SaaS, nous n’avons plus à gérer les droits ni les données. »
 - **A5-3.1.2** — Novalys envisage un service cloud. Écrivez trois questions à poser au fournisseur, sur la répartition des responsabilités, la reprise et la récupération des données en fin de contrat. Utilisez NIST SP 800-145 pour nommer le modèle de service (IaaS, PaaS ou SaaS), sans lui attribuer un engagement du fournisseur. Enregistrez.
 
-**Résultat attendu :** des affirmations limitées à ce qui est réellement démontré. Comparez avec le corrigé, partie A5-3. La conformité d’un schéma, l’engagement contractuel d’un fournisseur et le fonctionnement constaté lors d’un test sont trois choses différentes.
+**Résultat attendu :** des affirmations limitées à ce qui est réellement démontré. La conformité d’un schéma, l’engagement contractuel d’un fournisseur et le fonctionnement constaté lors d’un test sont trois choses différentes.
 
 ## Contrôle final
 
-**Vérification autonome :** comparez les décisions de votre fichier aux réponses des parties A5-1 à A5-3 du [corrigé](Corrige_ateliers.md). Une autre combinaison est recevable si chaque choix répond au besoin, sans confondre démarche, norme, langage et preuve de fonctionnement.
+Une autre combinaison est recevable si chaque choix répond au besoin, sans confondre démarche, norme, langage et preuve de fonctionnement.
 
 Votre fichier contient six associations motivées, une combinaison de trois approches, une vue avec deux écarts et leurs décisions, trois affirmations corrigées et trois questions cloud. Si vous avez associé un logiciel ou un outil à la place d’un référentiel, reprenez **A5-1.1.2** ; si votre vue ne montre pas où se trouve l’identité, reprenez **A5-2.1.2**. Conservez ce fichier pour l’atelier 6.
 
